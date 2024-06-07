@@ -18,8 +18,8 @@
                 </div>
                 @if(auth()->user()->role === 'admin' || auth()->user()->role === 'contManager')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('add-post') }}" :active="request()->routeIs('add-post')">
-                        {{ __('Post') }}
+                    <x-nav-link href="{{ route('PostPanel') }}" :active="request()->routeIs('PostPanel')">
+                        {{ __('PostPanel') }}
                     </x-nav-link>
                 </div>
                 @endif
@@ -159,7 +159,7 @@
             </x-responsive-nav-link>
         </div>
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link href="{{ route('add-post') }}" :active="request()->routeIs('add-post')">
+            <x-responsive-nav-link href="{{ route('PostPanel') }}" :active="request()->routeIs('PostPanel')">
                 {{ __('Post') }}
             </x-responsive-nav-link>
         </div>

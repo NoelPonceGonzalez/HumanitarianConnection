@@ -33,21 +33,17 @@ class AdminPanel extends Component
         }
     }
 
-    public function cancelEdit()
-    {
-        dd("si");
-        $this->selectedUser = null;
-    }
-
     public function updateUser()
     {
-        dd($this->updatedUser);
+
         if ($this->selectedUser) {
+
             $user = User::find($this->selectedUser->id);
             try {
                 $user->name = $this->updatedUser->name ?? $user->name;;
                 $user->email = $this->updatedUser->email ?? $user->email;;
                 $user->current_team_id = $this->updatedUser->current_team_id ?? $user->current_team_id;
+
 
                 $user->save();
             } catch (\Exception $e) {
@@ -57,6 +53,7 @@ class AdminPanel extends Component
 
         $this->selectedUser = null;
     }
+
     public function editUser($userId)
     {
         $this->selectedUser = User::find($userId);

@@ -72,8 +72,7 @@
                                 <td class="px-6 py-4 whitespace-nowrap text-center">{{ \Carbon\Carbon::parse($selectedUser['created_at'])->format('d/m/Y') }}</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-center">{{ \Carbon\Carbon::parse($selectedUser['updated_at'])->format('d/m/Y') }}</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-center">
-                                    <button type="submit" class="text-green-600 hover:text-green-900">💾</button>
-                                    <button wire:click="cancelEdit" class="text-gray-600 hover:text-gray-900">❌</button>
+                                    <button class="text-green-600 hover:text-green-900">💾</button>
                                 </td>
                             </tr>
                         </tbody>
